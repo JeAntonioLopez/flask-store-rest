@@ -18,3 +18,4 @@ __pycache__/
 
 # Archivos de configuración local
 .env
+instance/store.db
