@@ -16,7 +16,6 @@ def get_all_users():
 def create_vendor():
     return create_vendor_controller()
 
-# Asegúrate de pasar el vendor_id en la URL para la eliminación
 @admin_bp.route('/users/vendor/<int:vendor_id>', methods=['DELETE'])
 def delete_vendor(vendor_id):
     return delete_vendor_controller(vendor_id)

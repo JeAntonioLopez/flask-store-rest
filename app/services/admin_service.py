@@ -5,7 +5,7 @@ from app.models import UserType
 
 def get_all_users_service():
     """
-    Obtiene todos los usuarios de la base de datos.
+    Get all users.
     """
     try:
         users = User.query.all() 
@@ -16,10 +16,9 @@ def get_all_users_service():
 
 def create_vendor_service(username, password):
     """
-    Crea un nuevo usuario Vendor.
+    Create a new vendor user.
     """
     try:
-        # Verificar si ya existe un usuario con ese nombre de usuario
         if User.query.filter_by(username=username).first():
             raise Exception("Username already exists")
 
@@ -32,7 +31,7 @@ def create_vendor_service(username, password):
 
 def delete_vendor_service(vendor_id):
     """
-    Elimina un usuario Vendor.
+    Delete a vendor user by id.
     """
     try:
         vendor_user = User.query.get(vendor_id)
